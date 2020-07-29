@@ -1,0 +1,24 @@
+# The environment
+universe       = vanilla
+getenv         = True
+request_cpus   = 1
+request_memory = 10G
+
+# Execution
+initial_dir    = /data/project/brainage/brainage_code_220720/
+executable     = run_brainage.py
+
+
+
+# Job
+log            = /data/project/brainage/brainage_code_220720/logs/$(Cluster).$(Process).log
+output         = /data/project/brainage/brainage_code_220720/logs/$(Cluster).$(Process).out
+error          = /data/project/brainage/brainage_code_220720/logs/$(Cluster).$(Process).err
+
+#run_brainage.py [-h] [--models [MODELS]] [num_repeats] [num_folds] [master_seed] [num_processes] [which_site] [Idx_features] inputpath outputpath outputfilenm features_or_inputlist num_pca pca_status smote_status
+
+#arguments     = --models RVM 10 10 200 1 1 1 /data/project/brainage/data/BSF_423/camcan_bsf_423_features /data/project/brainage/data/BSF_423/ixi_bsf_423_features /data/project/brainage/CoRR_test_retest/results2/ ixi_100_camcan_70_30_smote 1 500 0 1
+#Queue
+
+arguments     = --models RVM 10 10 200 1 1 1 /data/project/brainage/data/BSF_173/camcan_bsf_173_features /data/project/brainage/data/BSF_173/ixi_bsf_173_features /data/project/brainage/CoRR_test_retest/results2/ ixi_100_camcan_70_30_smote_bsf173 1 500 0 1
+Queue

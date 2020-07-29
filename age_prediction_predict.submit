@@ -1,0 +1,16 @@
+# The environment
+universe       = vanilla
+getenv         = True
+request_cpus   = 1
+request_memory = 10G
+
+# Execution
+initial_dir    = /data/project/brainage/brainage_code_220720/
+executable     = make_prediction.py
+#arguments = /data/project/brainage/data/BSF_423/ixi_camcan_features /data/project/brainage/data/BSF_423/corr_ses1 /data/project/brainage/data/BSF_423/corr_ses2 /data/project/brainage/CoRR_test_retest/results2/ixi_camcan_dtr.model_comb /data/project/brainage/CoRR_test_retest/results2/ixi_camcan_dtr.model /data/project/brainage/CoRR_test_retest/results2/ixi_camcan_dtr.predict
+
+# Job
+log            = /data/project/brainage/brainage_code_220720/logs/$(Cluster).$(Process).log
+output         = /data/project/brainage/brainage_code_220720/logs/$(Cluster).$(Process).out
+error          = /data/project/brainage/brainage_code_220720/logs/$(Cluster).$(Process).err
+Queue
